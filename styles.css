@@ -1,0 +1,119 @@
+html {
+    background-color: #e0e3e9;
+}
+
+h3{
+    width: 100%;
+    margin-left: 2%;
+}
+
+div {
+    /* border: 3px red solid; */
+    
+}
+
+#display_spread{
+    border-bottom: 5px solid rgb(252, 248, 248);
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-around;
+   background-color: #e0e3e9;
+   align-items:center;
+   padding-top: 1%;
+}
+
+.item{
+    background-color: rgb(252, 248, 248);
+    padding: 1%;
+    width: 30%;
+    
+}
+
+
+#left{
+    width: 50%;
+    height: 500px;
+    
+}
+
+#right{
+    width: 50%;
+    height: 500px;
+    
+}
+
+ 
+.SpreadTable tr td {
+    /* border: 1px solid black; */
+    text-align: center;
+  }
+
+  .SpreadTable tr th {
+    /* border: 1px solid black; */
+    text-align: center;
+  }
+
+
+#Ktable tr td{
+    width: 33%;
+    border: 2px gainsboro solid;
+    text-align: center;
+}   
+
+#Ktable tr th{
+    border: 2px gainsboro solid;
+    text-align: center;
+}
+
+#box_K{
+    background-color: rgb(252, 248, 248);
+    padding: 1%;
+}
+
+.change{
+    
+    background-color: rgb(255, 170, 170); 
+}
+
+#opt{
+    color: crimson;
+}
+
+#right{
+    /* border: 3px solid red; */
+}
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    
+  }
+
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+
+  .tab button:hover {
+    background-color: #ddd;
+  }
+
+  .tab button.active {
+    background-color: #ccc;
+  }
+
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }

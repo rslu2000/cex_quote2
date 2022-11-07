@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cryptocurrency Exchanges</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>  
+        <script src="https://cdn.bootcss.com/pako/1.0.6/pako.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+        <h4>Cryptocurrency Exchanges</h4>
+    </head>
+    <body>
+        <div id="display_spread" class="flex">
+            <h3>total opportunity : <span id="opt"></span> times</h3>
+            <div class="item shadow-sm p-3 mb-5 bg-body rounded">
+                <table class="SpreadTable table table-striped" id="st0">
+                        <th>#</th><th>Binance vs Coinbaase</th>
+                        <tr><th>spread</th><td id="BvC_s">###</td></tr>
+                        <tr><th>percentage</th><td id="BvC_p">%%%</td></tr>
+                        <tr><th>opportunity</th><td id="BvC_o">0</td></tr>
+                </table>
+            </div>
+            <div class="item shadow-sm p-3 mb-5 bg-body rounded">
+                <table class="SpreadTable table table-striped" id="st1">
+                        <th>#</th><th>Coinbase vs Huobi.pro</th>
+                        <tr><th>spread</th><td id="CvH_s">###</td></tr>
+                        <tr><th>percentage</th><td id="CvH_p">%%%</td></tr>
+                        <tr><th>opportunity</th><td id="CvH_o">0</td></tr>
+                </table>
+            </div>
+            <div class="item shadow-sm p-3 mb-5 bg-body rounded">
+                <table class="SpreadTable table table-striped" id="st2">
+                        <th>#</th><th>Huobi.pro vs Binance</th>
+                        <tr><th>spread</th><td id="HvB_s">###</td></tr>
+                        <tr><th>percentage</th><td id="HvB_p">%%%</td></tr>
+                        <tr><th>opportunity</th><td id="HvB_o">0</td></tr>
+                </table>
+            </div>
+        </div>
+        <div id="middle" class="flex">
+            <div id="left">
+                <form class="flex"> 
+                    <select id="Cryptocurrency" onchange="DisplayKinfo()" class="form-select form-select-lg mb-3 shadow-sm p-3 mb-5 bg-body rounded" aria-label=".form-select-lg example" style = "width :50%;"> 
+                        <option>choose the Cryptocurrency</option>
+                        <option value="B">BTC/USD</option>
+                        <option value="E">ETH/USD</option>
+                        <option value="D">DOGE/USD</option>
+                    </select>
+                    <select id="K_stream" onchange="DisplayKinfo()" class="form-select form-select-lg mb-3 shadow-sm p-3 mb-5 bg-body rounded" aria-label=".form-select-lg example" style = "width :40%;">
+                        <option>choose the stream</option>
+                        <option value="1m">1 min</option>
+                        <option value="5m">5 mins</option>
+                        <option value="30m">30 mins</option>
+                    </select>
+                </form>
+                <div id="box_K">
+                    <table id="Ktable"></table>
+                </div>
+            </div>
+            <div id="right">
+                <div class="tab">
+                    <button class="tablinks" onclick="openChart(event,'Bee_chart')">Binance</button>
+                    <button class="tablinks" onclick="openChart(event,'Coi_chart')">Coinbase</button>
+                    <button class="tablinks" onclick="openChart(event,'Huo_chart')">Huobi</button>
+                </div>
+
+                <div id="Bee_chart" class="tabcontent"></div>
+                  
+                <div id="Coi_chart" class="tabcontent"></div>
+                  
+                <div id="Huo_chart" class="tabcontent"></div>
+            </div> 
+        </div>
+    </body>
+    <script src="Bee_chart.js"></script>
+    <script src="huobi_main.js"></script>
+    <script src="main.js"></script>
+</html>
